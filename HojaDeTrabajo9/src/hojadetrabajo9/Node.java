@@ -7,7 +7,7 @@
  */
 package hojadetrabajo9;
 
-public class Node<E> {
+public class Node<E>{
     
     private Association<String, String> valor;
     private Node<E> padre;

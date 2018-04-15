@@ -14,23 +14,23 @@ public class Association<K,V> implements Map.Entry<K,V>{
     protected K key;
     protected V value;
 
-    /**
-     * El contructor de la clase
-     * @param key: La llave de la clase
-     * @param value: El valor de la clase
-     */
-    public Association(K key, V value) {
-        this.key = key;
-        this.value = value;
-    }        
+        /**
+         * El contructor de la clase
+         * @param key: La llave de la clase
+         * @param value: El valor de la clase
+         */
+        public Association(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }        
     
-    /**
-     * Crea un par a partir de una llave
-     * @param llave: la llave
-     */
-    public Association(K llave) {
-        this(llave, null);        
-    }  
+        /**
+         * Crea un par a partir de una llave
+         * @param llave: la llave
+         */
+        public Association(K llave) {
+            this(llave, null);        
+        }  
 
     /**
      * La llave del objeto
@@ -72,5 +72,6 @@ public class Association<K,V> implements Map.Entry<K,V>{
         Association otroObjeto = (Association)objeto;
         return getKey().equals(otroObjeto.getKey());
     }
+   
     
 }
