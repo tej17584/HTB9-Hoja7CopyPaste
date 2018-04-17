@@ -22,7 +22,12 @@ public class HojaDeTrabajo9 {
         String paciente="";
         boolean power = true, inicio = true;
         Scanner teclado = new Scanner(System.in);
-        Procesos procesos = new Procesos();        
+        Procesos procesos = new Procesos(); 
+        ProcesosRBT procesosrbt= new ProcesosRBT();
+         Factory fac = new Factory();
+        
+      
+        RedBlackBST<String,String> RBTree = null;
         
         System.out.println("Bienvenido al programa!");
         System.out.println("Ingrese la implementacion que desea utilizar:");
@@ -44,13 +49,14 @@ public class HojaDeTrabajo9 {
             decision = teclado.nextInt();
             
             if (decision==1) {
-                
+                procesos.setSplayTree((SplayTree) fac.getImp("1"));
                 procesos.diccionarioSN();
                 power = false;
                 
             } else if (decision==2) {
-                
-                System.out.println("Hace tu implementacion Tejada hahaha");
+                procesosrbt.setRBT((RedBlackBST<String, String>) fac.getImp("2"));
+                procesosrbt.diccionarioSN();
+                power=false;
                                                
             }             
         }

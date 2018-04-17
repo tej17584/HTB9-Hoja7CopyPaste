@@ -17,10 +17,10 @@ import java.util.Scanner;
  * @version: 20.04.18
  */
 
-public class Procesos {     
- public SplayTree st;
+public class ProcesosRBT {     
+ public RedBlackBST<String,String> st;
  
- public void setSplayTree(SplayTree arbolito){
+ public void setRBT(RedBlackBST<String,String> arbolito){
      this.st=arbolito;
  }
     public void diccionarioSN() {
@@ -61,15 +61,12 @@ public class Procesos {
             posicion = linea.indexOf("-");           
             Key = linea.substring(0, posicion);            
             Value=linea.substring(posicion+1, linea.length());  
-                      
-            Association nuevoNodo = new Association(Key.toUpperCase(), Value.toUpperCase()); //se crea el "nodo" que se pondrá en el tree             
-            st.insert(nuevoNodo);
+            this.st.put(Key.toUpperCase(), Value.toUpperCase());
+            
             
         }
         
-            System.out.println("Imprimiendo diccionario en PostOrder:\n");
-            st.postorder();
-            System.out.println("\n");
+            
             
         //Iniciamos con la segunda lectura del archivo a traducir
         frr = new FileReader("texto.txt");
@@ -96,11 +93,13 @@ public class Procesos {
             
             palabra = p.toUpperCase();                
             System.out.print(palabra + " ");                            
-            resultado += st.translate(palabra);     
+            resultado +=st.get(palabra)+" "; 
+           
 
         }                 
         
-        System.out.println("\n\nTraduccion:");        
+        System.out.println("\n\nTraduccion:");  
+            
         System.out.println(resultado);                     
         
         } catch(IOException e){

@@ -1,8 +1,10 @@
 package hojadetrabajo9;
-
 /**
- *  Java Program to Implement SplayTree
- **/
+ *  * Algoritmos y estructura de datos - seccion 10
+ * @author: Oscar Juarez - 17315
+ * @author: Jose Alejandro Tejada - 17584
+ * @version: 19.03.18
+ */
  
 import java.util.Scanner;
  
