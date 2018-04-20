@@ -9,8 +9,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Clase que define el valor de los nodos que se estara implementando en el programa
- * Estos se usan como 'valor - llave'.
+ * Procesos que ejecuta el arbol RBT
  * Algoritmos y estructura de datos - seccion 10
  * @author: Oscar Juarez - 17315
  * @author: Jose Alejandro Tejada - 17584
@@ -18,12 +17,12 @@ import java.util.Scanner;
  */
 
 public class ProcesosRBT {     
- public RedBlackBST<String,String> st;
+ public RedBlackBST<String,String> rbt;
  
  public void setRBT(RedBlackBST<String,String> arbolito){
-     this.st=arbolito;
+     this.rbt=arbolito;
  }
-    public void diccionarioSN() {
+    public void diccionarioRBT() {
         
         File archivo = null;
         FileReader fr = null;
@@ -61,7 +60,7 @@ public class ProcesosRBT {
             posicion = linea.indexOf("-");           
             Key = linea.substring(0, posicion);            
             Value=linea.substring(posicion+1, linea.length());  
-            this.st.put(Key.toUpperCase(), Value.toUpperCase());
+            this.rbt.put(Key.toUpperCase(), Value.toUpperCase());
             
             
         }
@@ -92,10 +91,16 @@ public class ProcesosRBT {
         for(String p: WordList){
             
             palabra = p.toUpperCase();                
-            System.out.print(palabra + " ");                            
-            resultado +=st.get(palabra)+" "; 
+            System.out.print(palabra + " ");  
+            
+            String traducida = rbt.get(palabra);
+            
+            if (traducida==null) {
+                traducida = "*" + palabra + "*";
+            }                        
+            
+            resultado += traducida+" "; 
            
-
         }                 
         
         System.out.println("\n\nTraduccion:");  

@@ -1,9 +1,14 @@
 package hojadetrabajo9;
 /**
- *  * Algoritmos y estructura de datos - seccion 10
+ * Arbol splay tree
+ * Algoritmos y estructura de datos - seccion 10
  * @author: Oscar Juarez - 17315
  * @author: Jose Alejandro Tejada - 17584
- * @version: 19.03.18
+ * @version: 20.04.18
+ */
+
+ /*
+ * Implementacion obtenida de: https://www.sanfoundry.com/java-program-implement-splay-tree/
  */
  
 import java.util.Scanner;
@@ -239,6 +244,11 @@ import java.util.Scanner;
          return null;
      }
      
+     /**
+      * Translates the actual word, calling a recursuve method.
+      * @param s: The word to be translated
+      * @return: Translated word
+      */
     public String translate(String s){
          
        SplayNode n=translateRecursive(root,s);
@@ -254,6 +264,12 @@ import java.util.Scanner;
    }
 
    
+    /**
+     * Gets the translated word
+     * @param current: current node being used
+     * @param s: The word to be translated
+     * @return: The translated word
+     */
     public SplayNode translateRecursive(SplayNode current, String s){
        
         if (current == null) {

@@ -1,5 +1,12 @@
 package hojadetrabajo9;
 
+/**
+ * Clase factory que permite al usuario la implementacion a usar
+ * Algoritmos y estructura de datos - seccion 10
+ * @author: Oscar Juarez - 17315
+ * @author: Jose Alejandro Tejada - 17584
+ * @version: 20.04.18
+ */
 
 import java.util.PriorityQueue;
 

@@ -1,10 +1,16 @@
 package hojadetrabajo9;
 /**
+ * Clase nodo usada por el arbol Splay.
  * Algoritmos y estructura de datos - seccion 10
  * @author: Oscar Juarez - 17315
  * @author: Jose Alejandro Tejada - 17584
  * @version: 19.03.18
  */
+
+ /*
+ * Implementacion obtenida de: https://www.sanfoundry.com/java-program-implement-splay-tree/
+ */
+
  class SplayNode<E>
  {    
      SplayNode<E> left, right, parent;

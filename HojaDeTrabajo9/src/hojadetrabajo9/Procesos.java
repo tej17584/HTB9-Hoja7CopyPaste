@@ -9,8 +9,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- * Clase que define el valor de los nodos que se estara implementando en el programa
- * Estos se usan como 'valor - llave'.
+ * Clase que contiene el metodo con el cual Splay Tree traduce el txt.
  * Algoritmos y estructura de datos - seccion 10
  * @author: Oscar Juarez - 17315
  * @author: Jose Alejandro Tejada - 17584

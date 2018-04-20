@@ -11,6 +11,14 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+/**
+ * Clase principal con la que el usuario interactua
+ * Algoritmos y estructura de datos - seccion 10
+ * @author: Oscar Juarez - 17315
+ * @author: Jose Alejandro Tejada - 17584
+ * @version: 20.04.18
+ */
+
 public class HojaDeTrabajo9 {
 
     /**
@@ -55,7 +63,7 @@ public class HojaDeTrabajo9 {
                 
             } else if (decision==2) {
                 procesosrbt.setRBT((RedBlackBST<String, String>) fac.getImp("2"));
-                procesosrbt.diccionarioSN();
+                procesosrbt.diccionarioRBT();
                 power=false;
                                                
             }             

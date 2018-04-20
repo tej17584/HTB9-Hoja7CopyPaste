@@ -6,10 +6,11 @@ package hojadetrabajo9;
 import java.util.NoSuchElementException;
 import java.util.Queue;
 /**
+ * Implementacion del arbol RBT
  * Algoritmos y estructura de datos - seccion 10
  * @author: Oscar Juarez - 17315
  * @author: Jose Alejandro Tejada - 17584
- * @version: 19.03.18
+ * @version: 20.04.18
  */
 public class RedBlackBST<Key extends Comparable<Key>, Value extends Comparable<Value>>{
     private static final boolean RED   = true;
@@ -92,9 +93,9 @@ public class RedBlackBST<Key extends Comparable<Key>, Value extends Comparable<V
     private Value get(Node x, Key key) {
         while (x != null) {
             int cmp = key.compareTo(x.key);
-            if      (cmp < 0) x = x.left;
+            if (cmp < 0) x = x.left;
             else if (cmp > 0) x = x.right;
-            else              return x.val;
+            else return x.val;
         }
         return null;
     }
