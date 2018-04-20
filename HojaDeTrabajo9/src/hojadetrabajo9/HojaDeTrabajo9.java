@@ -22,7 +22,7 @@ import java.util.TreeMap;
 public class HojaDeTrabajo9 {
 
     /**
-     * @param arg
+     * @param arg es el argumento
      */
     public static void main(String [] arg) {
         
