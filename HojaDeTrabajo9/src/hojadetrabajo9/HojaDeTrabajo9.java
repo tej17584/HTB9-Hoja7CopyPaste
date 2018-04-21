@@ -40,7 +40,8 @@ public class HojaDeTrabajo9 {
         System.out.println("Bienvenido al programa!");
         System.out.println("Ingrese la implementacion que desea utilizar:");
         System.out.println("1. SplayTree");
-        System.out.println("2. Red Black Tree\n");
+        System.out.println("2. Red Black Tree");
+        System.out.println("3. Salir del programa\n");
         System.out.print("Decision: ");       
         
         while (inicio) {
@@ -58,15 +59,23 @@ public class HojaDeTrabajo9 {
             
             if (decision==1) {
                 procesos.setSplayTree((SplayTree) fac.getImp("1"));
-                procesos.diccionarioSN();
+                procesos.diccionarioST();
                 power = false;
                 
             } else if (decision==2) {
                 procesosrbt.setRBT((RedBlackBST<String, String>) fac.getImp("2"));
                 procesosrbt.diccionarioRBT();
                 power=false;
+                
+            } else if (decision==3){
+                
+                System.out.println("\nNo se utilizo ninguna implementancion :(");
+                System.out.println("Saliendo...");
+                power=false;
                                                
-            }             
+            } else {
+                System.err.println("Por favor ingrese una opcion valida");
+            }            
         }
     }
 }
